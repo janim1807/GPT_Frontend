@@ -1,0 +1,29 @@
+<div class="search-container">
+  <div class="header"></div>
+  <div class="chat">
+    <div class="chat-bubbles">
+      <div class="chat-bubble bot-bubble arrow-left">
+        <div class="bubble-content">Hallo, ich bin ein KI-System, das Ihnen bei der Arbeit mit unserer SAP-Datenbank hilft. Wenn Sie Fragen zu bestimmten Tabellen haben oder einfache Abfragen durchführen möchten, stehe ich Ihnen gerne zur Verfügung!</div>
+      </div>
+      <ng-container *ngFor="let message of chatMessages">
+        <div class="chat-bubble" [ngClass]="{
+          'user-bubble': message.role === 'user',
+          'bot-bubble': message.role === 'assistant',
+          'arrow-right': message.role === 'user',
+          'arrow-left': message.role === 'assistant'
+        }">
+          <div class="bubble-content" [innerHTML]="highlightWords(message.content)">
+            <ul>
+              <li *ngFor="let item of message.content.split('-')">{{ item.trim() }}</li>
+            </ul>
+          </div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+        </div>
+      </ng-container>
+    </div>
+  </div>
+  <div class="input-container">
+    <input type="text" class="search-input" placeholder="Ask a question" [(ngModel)]="userInput" (keydown)="onKeyDown($event)">
+    <button class="search-button" (click)="sendMessage()"><mat-icon>send</mat-icon></button>
+    <mat-slide-toggle [(ngModel)]="isChecked">SQL-Abfrage ausführen</mat-slide-toggle>
+  </div>
+</div>

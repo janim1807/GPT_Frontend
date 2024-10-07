@@ -1,0 +1,171 @@
+:host ::ng-deep .bold-text {
+  font-weight: bold;
+}
+
+.search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh; /* Change height to min-height */
+  padding-bottom: 60px; /* Add padding to accommodate the input container */
+  position: relative; /* Add this line to establish a positioning context for the input container */
+}
+
+
+
+.header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  width: 400px;
+  max-width: 100%;
+}
+
+.search-input {
+  flex-grow: 1;
+  height: 36px;
+  padding: 6px 12px;
+  border: 1px  ;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: #f3f3f3;
+  margin-right: 10px;
+
+}
+
+.search-button {
+  padding: 8px 16px;
+  margin-left: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #000099;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.chatbot-title {
+  display: flex;
+  align-items: center;
+}
+
+.chat-history {
+  display: flex;
+  align-items: center;
+  margin-left: 8px;
+}
+
+.mat-icon {
+  font-size: 20px;
+}
+
+.chat-history-label {
+  font-size: 12px;
+  margin-left: 4px;
+}
+
+.chat-bubbles {
+  grid-column: 2;
+  grid-row: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 20px; /* Adjust the margin as needed */
+  margin-right: 20px; /* Adjust the margin as needed */
+  overflow-y: auto; /* Add this line to enable vertical scrolling */
+  max-height: calc(100vh - 155px); /* Adjust the max-height to leave space for the header and input field */
+}
+
+
+.chat-bubble {
+  max-width: 80%;
+  padding: 10px;
+  white-space: pre-wrap; /* Preserve line breaks in the bubble content */
+  border-radius: 10px;
+  word-wrap: break-word;
+  position: relative;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 10px; /* Add margin-bottom for spacing between chat bubbles */
+}
+
+.bubble-content ul {
+  padding-left: 0; /* Remove the default left padding for the unordered list */
+}
+
+.bold-text {
+  font-weight: 700 !important;
+}
+
+
+.bubble-content li {
+  list-style: none; /* Remove the default bullet points */
+  margin-left: 1em; /* Add left margin to create indentation */
+  text-indent: -1em; /* Adjust the text indentation to counteract the left margin */
+}
+
+.user-bubble {
+  align-self: flex-end;
+  background-color: #dcf8c6;
+}
+
+.bot-bubble {
+  align-self: flex-start;
+  background-color: #add8e6
+}
+
+.arrow-right::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -8px;
+  transform: translateY(-50%);
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 8px solid #dcf8c6;
+}
+
+.arrow-left::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -8px;
+  transform: translateY(-50%);
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-right: 8px solid  #add8e6;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  height: 40px; /* Set the height of the input container */
+  position: fixed;
+  bottom: 0;
+  background-color: #f3f3f3;
+  padding: 8px;
+}
+
+.input-container .search-input {
+  flex-grow: 1;
+}
+
+.input-container .search-button {
+  margin-left: 8px;
+}
+
+  mat-slide-toggle {
+  margin-left: 10px;
+}
+
+
