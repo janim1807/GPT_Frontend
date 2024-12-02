@@ -1,27 +1,21 @@
-# Untitled
+# Frontend for Data Worker Assistant Chatbot
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.4.
+This repository hosts the frontend code for the **Data Worker Assistant Chatbot**, a tool developed to enhance the daily workflows of data workers by simplifying SQL query generation, improving database schema understanding, and providing a user-friendly knowledge repository.
 
-## Development server
+## Overview
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+The frontend is built with **Angular**, a robust framework for creating dynamic, user-centric web applications. It integrates seamlessly with the backend to provide a smooth user experience for interacting with a database, visualizing data, and querying information through natural language.
 
-## Code scaffolding
+## Features
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **Intuitive Interface**: A minimalistic and user-friendly design for easy navigation.
+- **Dynamic Query Execution**: Allows users to generate and execute SQL queries using natural language inputs.
+- **Database Insights**: Provides descriptions of database schemas, columns, and relationships.
+- **Real-time Responses**: Fetches live database schema and displays query results interactively.
+- **Customizable Components**: Easily adaptable for various use cases and database structures.
 
-## Build
+## Technologies Used
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- **Angular**: HTML, TypeScript, CSS for frontend development.
+- **REST API Integration**: To communicate with the backend and GPT model.
+- **Figma**: Used for initial design prototyping and interface planning.
